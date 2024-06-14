@@ -13,8 +13,6 @@ class RetrofitTest {
 
     private lateinit var mockWebServer: MockWebServer
     private lateinit var api: WorkersApi
-
-
     @Before
     fun setup() {
         mockWebServer = MockWebServer()
@@ -22,7 +20,6 @@ class RetrofitTest {
 
         api = RetrofitBuilder().createApi("https://stoplight.io/mocks/kode-api/trainee-test/331141861/")
     }
-
     @After
     fun teardown() {
         mockWebServer.shutdown()
